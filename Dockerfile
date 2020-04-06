@@ -2,7 +2,6 @@ FROM russmckendrick/nodejs
 ADD src /srv/app
 WORKDIR /srv/app
 RUN npm install
-EXPOSE 80
 EXPOSE 3000
 RUN npm install pm2 -g
 RUN pm2 start server.js
